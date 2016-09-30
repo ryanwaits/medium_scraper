@@ -1,4 +1,8 @@
 require "medium_scraper/version"
+require 'mechanize'
+require 'nokogiri'
+require 'json'
+require 'awesome_print'
 
 module MediumScraper
   class Post
