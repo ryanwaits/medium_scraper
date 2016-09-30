@@ -1,8 +1,8 @@
-# MediumScraper
+# Medium Scraper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/medium_scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
+A read-only api for the Medium blogging platform to retrieve basic user information and the latest posts in one simple command. 
 
-TODO: Delete this and the text above, and describe your gem
+I built this for the sole purpose of being able to display some of my latest blog posts on my personal site. So if you're looking for similar functionality, this should work well for you. 
 
 ## Installation
 
@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To retrieve an object with user and post information:
+
+```ruby
+MediumScraper::Post.latest <username>
+```
 
 ## Development
 
