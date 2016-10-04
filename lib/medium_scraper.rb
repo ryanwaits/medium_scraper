@@ -32,6 +32,7 @@ module MediumScraper
                   post = {}
                   post[:title] = blob[1]['title']
                   post[:subtitle] = blob[1]['content']['subtitle']
+                  post[:source] = "medium"
                   post[:createdAt] = blob[1]['virtuals']['createdAtEnglish']
                   posts << post
               end
