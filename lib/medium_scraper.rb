@@ -7,7 +7,7 @@ require 'awesome_print'
 module MediumScraper
   class Post
       def self.latest handle
-          url = "https://medium.com/@#{handle}/latest"
+          url = "https://medium.com/@#{handle}/latest"  
           agent = Mechanize.new
           html = agent.get(url).body
           doc = Nokogiri::HTML(html)
@@ -33,7 +33,7 @@ module MediumScraper
                   post[:title] = blob[1]['title']
                   post[:subtitle] = blob[1]['content']['subtitle']
                   post[:source] = "medium"
-                  post[:createdAt] = blob[1]['virtuals']['createdAtEnglish']
+                  post[:createdAt] = DateTime.parse(blob[1]['virtuals']['createdAtEnglish']).strftime('%Y-%m-%d')
                   posts << post
               end
           end
